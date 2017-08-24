@@ -14,3 +14,21 @@ if (!$conn){
 }
 
 echo 'Connected Successfully';
+
+// CREATE a DATABASE
+// $sql = "CREATE DATABASE phpcreated";
+// run the query to create the database.
+/*if (mysqli_query($conn, $sql)) {
+    echo "Database created successfully";
+} else {
+    echo "Error creating database: " . mysqli_error($conn);
+}*/
+
+// REMOVE A DATABASE
+$sql = "DROP DATABASE phpcreated";
+// run the query to create the database.
+if (mysqli_query($conn, $sql)) {
+    echo "Database Deleted successfully";
+} else {
+    echo "Error deleting database: " . mysqli_error($conn);
+}
